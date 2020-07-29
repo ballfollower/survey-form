@@ -13,9 +13,42 @@
     <p id="description">Help us find a position for you</p>
 
     <form id="survey-form" action="">
-      <label id="name-label" for="name">name</label> <input id="name" required><br>
-      <label id="email-label" for="email">e-mail</label> <input type="email" id="email" required><br>
-      <label id="number-label" for="number">preferred number on the match shirt (optional)</label> <input type="number" id="number" min="1" max="99"><br>
+      <label id="name-label" for="name">name</label> <input id="name" placeholder="Enter your name" required><br>
+      <label id="email-label" for="email">e-mail</label> <input type="email" id="email" placeholder="Enter your e-mail" required><br>
+      <label id="number-label" for="number">preferred number on the match shirt (optional)</label> <input type="number" id="number" placeholder="Enter the number" min="1" max="99"><br>
+      
+      <p>Your last position</p>
+      <select name="last position" id="dropdown">
+        <option value="setter">setter</option>
+        <option value="opposite">opposite</option>
+        <option value="wing spiker">wing spiker</option>
+        <option value="middle blocker">middle blocker</option>
+        <option value="libero">libero</option>
+      </select>
+      
+      <p>Side</p>
+      <label><input name="side" value="right" type="radio" checked>right-handed</label>
+      <label><input name="side" value="left" type="radio">left-handed</label>
+      <label><input name="side" value="both" type="radio">bimanual</label>
+
+      <p>What days are you able to train?</p>
+
+      <label><input name="train-days" value="Monday" type="checkbox">Monday</label>
+      <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label>
+      <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label>
+      <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label>
+      <label><input name="train-days" value="Friday" type="checkbox">Friday</label>
+      <label><input name="train-days" value="Saturday" type="checkbox">Saturday</label>
+
+      <p>Comments</p>
+      <textarea
+        id="comments"
+        name="comments"
+        placeholder="Enter the comments"
+      ></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+
       <!-- <label for=""></label> <input type="text" id=""><br> -->
       <!-- <label for=""></label> <input type="text" id=""><br> -->
       <!-- <label for=""></label> <input type="text" id=""><br> -->

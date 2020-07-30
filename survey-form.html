@@ -9,6 +9,8 @@
         margin: 20px auto;
         border: 2px solid darkblue;
         border-radius: 6px;
+
+        color: darkblue;
       }
 
       #header {
@@ -16,14 +18,30 @@
         color: white;
         /* margin-top: -20px; */
       }
+
+      #logo {
+        width: 18%;
+        height: 50px;
+        border: 1px solid green;
+        float: right;
+      }
+
+      tr:nth-of-type(odd) {
+        background-color: #eef;
+      }
+
+      td:first-child {
+        width: 35%;
+      }
     </style>
   </head>
 
   <body>
     <div id="main">
       <div id="header">
-        <h1 id="title">Volleyballer Warsaw Enroll Survey</h1>
-        <p id="description">Help us find a position for you</p>  
+          <img id="logo">
+          <h1 id="title">Volleyballer Warsaw Enroll Survey</h1>
+          <p id="description">Help us find a position for you</p>    
       </div>
   
       <form id="survey-form" action="">
@@ -35,10 +53,6 @@
           <tr>
             <td><label id="email-label" for="email">e-mail</label></td>
             <td><input type="email" id="email" placeholder="Enter your e-mail" required></td>
-          </tr>
-          <tr>
-            <td><label id="number-label" for="number">preferred number on the match shirt (optional)</label></td>
-            <td><input type="number" id="number" placeholder="Enter the number" min="1" max="99"></td>
           </tr>
           <tr>
             <td>Your last position</td>
@@ -72,26 +86,27 @@
             </td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>What days are you able to train?</td>
+            <td>
+              <label><input name="train-days" value="Monday" type="checkbox">Monday</label>
+              <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label>
+              <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label>
+              <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label>
+              <label><input name="train-days" value="Friday" type="checkbox">Friday</label>
+              <label><input name="train-days" value="Saturday" type="checkbox">Saturday</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label id="number-label" for="number">preferred number on the match shirt (optional)</label></td>
+            <td><input type="number" id="number" placeholder="Enter the number" min="1" max="99"></td>
+          </tr>
+          <tr>
+            <td>Comments</td>
+            <td>
+              <textarea id="comments" name="comments" placeholder="Enter the comments"></textarea>
+            </td>
           </tr>
         </table>
-    
-        <p>What days are you able to train?</p>
-  
-        <label><input name="train-days" value="Monday" type="checkbox">Monday</label>
-        <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label>
-        <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label>
-        <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label>
-        <label><input name="train-days" value="Friday" type="checkbox">Friday</label>
-        <label><input name="train-days" value="Saturday" type="checkbox">Saturday</label>
-  
-        <p>Comments</p>
-        <textarea
-          id="comments"
-          name="comments"
-          placeholder="Enter the comments"
-        ></textarea>
   
         <button type="submit" id="submit">Submit</button>
   

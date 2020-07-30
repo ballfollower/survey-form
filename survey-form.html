@@ -2,59 +2,107 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- <link rel = "stylesheet"
-        type = "text/css"
-        href = "style.css"> -->
     <title>Volleyballer Warsaw Enrollment Form</title>
+    <style>
+      #main {
+        max-width: 500px;
+        margin: 20px auto;
+        border: 2px solid darkblue;
+        border-radius: 6px;
+      }
+
+      #header {
+        background-color: darkblue;
+        color: white;
+        /* margin-top: -20px; */
+      }
+    </style>
   </head>
 
   <body>
-    <h1 id="title">Volleyballer Warsaw Enroll Survey</h1>
-    <p id="description">Help us find a position for you</p>
+    <div id="main">
+      <div id="header">
+        <h1 id="title">Volleyballer Warsaw Enroll Survey</h1>
+        <p id="description">Help us find a position for you</p>  
+      </div>
+  
+      <form id="survey-form" action="">
+        <table>
+          <tr>
+            <td><label id="name-label" for="name">name</label></td>
+            <td><input id="name" placeholder="Enter your name" required></td>
+          </tr>
+          <tr>
+            <td><label id="email-label" for="email">e-mail</label></td>
+            <td><input type="email" id="email" placeholder="Enter your e-mail" required></td>
+          </tr>
+          <tr>
+            <td><label id="number-label" for="number">preferred number on the match shirt (optional)</label></td>
+            <td><input type="number" id="number" placeholder="Enter the number" min="1" max="99"></td>
+          </tr>
+          <tr>
+            <td>Your last position</td>
+            <td>
+              <select name="last position" id="dropdown">
+                <option value="setter">setter</option>
+                <option value="opposite">opposite</option>
+                <option value="wing spiker">wing spiker</option>
+                <option value="middle blocker">middle blocker</option>
+                <option value="libero">libero</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Your desired position</td>
+            <td>
+              <select name="desired position" id="desired-position">
+                <option value="setter">setter</option>
+                <option value="opposite">opposite</option>
+                <option value="wing spiker">wing spiker</option>
+                <option value="middle blocker">middle blocker</option>
+                <option value="libero">libero</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Are you familiar with the rotation scheme (for your desired position)?</td>
+            <td>
+              <label><input name="rotation" value="yes" type="radio">yes</label>
+              <label><input name="rotation" value="no" type="radio">no</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+    
+        <p>What days are you able to train?</p>
+  
+        <label><input name="train-days" value="Monday" type="checkbox">Monday</label>
+        <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label>
+        <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label>
+        <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label>
+        <label><input name="train-days" value="Friday" type="checkbox">Friday</label>
+        <label><input name="train-days" value="Saturday" type="checkbox">Saturday</label>
+  
+        <p>Comments</p>
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Enter the comments"
+        ></textarea>
+  
+        <button type="submit" id="submit">Submit</button>
+  
+        <!-- <label for=""></label> <input type="text" id=""><br> -->
+        <!-- <label for=""></label> <input type="text" id=""><br> -->
+        <!-- <label for=""></label> <input type="text" id=""><br> -->
+        <!-- <label for=""></label> <input type="text" id=""><br> -->
+        <!-- <label for=""></label> <input type="text" id=""><br> -->
+      </form>
+    </div>
 
-    <form id="survey-form" action="">
-      <label id="name-label" for="name">name</label> <input id="name" placeholder="Enter your name" required><br>
-      <label id="email-label" for="email">e-mail</label> <input type="email" id="email" placeholder="Enter your e-mail" required><br>
-      <label id="number-label" for="number">preferred number on the match shirt (optional)</label> <input type="number" id="number" placeholder="Enter the number" min="1" max="99"><br>
-      
-      <p>Your last position</p>
-      <select name="last position" id="dropdown">
-        <option value="setter">setter</option>
-        <option value="opposite">opposite</option>
-        <option value="wing spiker">wing spiker</option>
-        <option value="middle blocker">middle blocker</option>
-        <option value="libero">libero</option>
-      </select>
-      
-      <p>Side</p>
-      <label><input name="side" value="right" type="radio" checked>right-handed</label>
-      <label><input name="side" value="left" type="radio">left-handed</label>
-      <label><input name="side" value="both" type="radio">bimanual</label>
-
-      <p>What days are you able to train?</p>
-
-      <label><input name="train-days" value="Monday" type="checkbox">Monday</label>
-      <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label>
-      <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label>
-      <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label>
-      <label><input name="train-days" value="Friday" type="checkbox">Friday</label>
-      <label><input name="train-days" value="Saturday" type="checkbox">Saturday</label>
-
-      <p>Comments</p>
-      <textarea
-        id="comments"
-        name="comments"
-        placeholder="Enter the comments"
-      ></textarea>
-
-      <button type="submit" id="submit">Submit</button>
-
-      <!-- <label for=""></label> <input type="text" id=""><br> -->
-      <!-- <label for=""></label> <input type="text" id=""><br> -->
-      <!-- <label for=""></label> <input type="text" id=""><br> -->
-      <!-- <label for=""></label> <input type="text" id=""><br> -->
-      <!-- <label for=""></label> <input type="text" id=""><br> -->
-    </form>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>

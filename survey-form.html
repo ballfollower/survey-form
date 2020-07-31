@@ -5,10 +5,11 @@
     <title>Volleyballer Warsaw Enrollment Form</title>
     <style>
       body {
-        background-image: url("fresh_snow.png");
+        background-image: url("greyfloral.png");
       }
 
       #main {
+        clear: both;
         max-width: 500px;
         margin: 20px auto;
         border: 2px solid darkblue;
@@ -18,10 +19,14 @@
         color: darkblue;
       }
 
+      h1 {
+        margin: 0;
+      }
+
       #header {
         background-color: darkblue;
         color: white;
-        /* margin-top: -20px; */
+        padding: 10px;
       }
 
       #logo {
@@ -31,8 +36,24 @@
         float: right;
       }
 
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 1em 10px;
+      }
+
       td:first-child {
         width: 35%;
+      }
+
+      tr {
+        border-bottom: 1px solid gray;
+      }
+
+      tr:last-child { 
+          border-bottom: none; 
       }
     </style>
   </head>
@@ -42,7 +63,7 @@
       <div id="header">
           <img id="logo">
           <h1 id="title">Volleyballer Warsaw Enroll Survey</h1>
-          <p id="description">Help us find a position for you</p>    
+          <p id="description">Help us find a position for you!</p>    
       </div>
   
       <form id="survey-form" action="">
@@ -89,11 +110,11 @@
           <tr>
             <td>What days are you able to train?</td>
             <td>
-              <label><input name="train-days" value="Monday" type="checkbox">Monday</label>
-              <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label>
-              <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label>
-              <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label>
-              <label><input name="train-days" value="Friday" type="checkbox">Friday</label>
+              <label><input name="train-days" value="Monday" type="checkbox">Monday</label><br>
+              <label><input name="train-days" value="Tuesday" type="checkbox">Tuesday</label><br>
+              <label><input name="train-days" value="Wednesday" type="checkbox">Wednesday</label><br>
+              <label><input name="train-days" value="Thursday" type="checkbox">Thursday</label><br>
+              <label><input name="train-days" value="Friday" type="checkbox">Friday</label><br>
               <label><input name="train-days" value="Saturday" type="checkbox">Saturday</label>
             </td>
           </tr>

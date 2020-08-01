@@ -6,6 +6,7 @@
     <style>
       body {
         background-image: url("greyfloral.png");
+        font-family: sans-serif;
       }
 
       #main {
@@ -21,28 +22,28 @@
 
       h1 {
         margin: 0;
+        font-size: x-large;
       }
 
       #header {
         display: flex;
+        justify-content: space-between;
         background-color: darkblue;
         color: white;
         padding: 10px;
       }
 
       #header-text {
-        float: left;
-        width: 78%;
-        background-color: inherit;
       }
 
       #header-logo {
-        width: 22%;
+        align-self: center;
+        flex-shrink: 0;
       }
 
       #logo {
         /* display: block; */
-        width: 100%;
+        width: 100px;
         /* border: 1px solid green; */
         /* float: right; */
       }

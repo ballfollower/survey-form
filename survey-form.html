@@ -66,6 +66,10 @@
       tr:last-child { 
           border-bottom: none; 
       }
+
+      input[type=text], textarea {
+        width: 100%;
+      }
     </style>
   </head>
 
@@ -85,7 +89,7 @@
         <table>
           <tr>
             <td><label id="name-label" for="name">name</label></td>
-            <td><input id="name" placeholder="Enter your name" required></td>
+            <td><input type="text" id="name" placeholder="Enter your name" required></td>
           </tr>
           <tr>
             <td><label id="email-label" for="email">e-mail</label></td>
